@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Brawlhalla",
+        "innerColor": "#6db8c2",
+        "borderColor": "#2f7a84"
+    },
+    {
+        "name": "Valorant",
+        "innerColor": "#8c3fd9",
+        "borderColor": "#242a2b"
+    },
+    {
+        "name": "Dota 2",
+        "innerColor": "#242a2b",
+        "borderColor": "#4f569e"
+    }
+]
