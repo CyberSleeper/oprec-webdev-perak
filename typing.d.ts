@@ -1,5 +1,7 @@
-interface IGameBox {
+interface IGame {
+    id: string;
     name: string;
-    innerColor: string;
-    borderColor: string;
+    registerationFee: number;
+    paymentInfos: PaymentType[];
+    key: number;
 }

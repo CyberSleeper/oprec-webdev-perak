@@ -7,17 +7,16 @@ import DataGame from "../dataGame.json"
 import { api } from "../utils/api";
 
 const Home: NextPage = () => {
-  // const hello = api.example.hello.useQuery({ text: "from tRPC" });
-
+  const gameData = api.game.getGames.useQuery();
   return (
     <main className="bg-[#f4efd3] w-full">
-      <h1 className="font-poppins text-[64px]">Pilih games yang<br/>kamu inginkan</h1>
+      <h1 className="font-poppins text-[64px] font-black">Pilih games yang<br/>kamu inginkan</h1>
       <h2 className="font-magic-retro text-[36px]">Games Individual</h2>
       <ul className="flex">
         {
-          DataGame.map((val, index) => (
+          gameData.data ? gameData.data.map((val, index) => (
             <GameBox key={index} {...val} />
-            ))
+          )) : "Loading game data"
         }
       </ul>
     </main>
