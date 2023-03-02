@@ -44,11 +44,15 @@ const Home: NextPage = () => {
       nickname: "",
       npm: "",  
       contactInfo: "",
-      typeId: "id",
-      registeredGameId: gameData?.id
+      typeId: "",
+      registeredGameId: ""
     }
   });
-  const onSubmit = (data: Inputs) => create.mutate(data);
+  const onSubmit = (data: Inputs) => {
+    data.typeId = "cleq7h91600063ark8hp9gsp4";
+    data.registeredGameId = "cleq70f7g00003arkva9v94py";
+    create.mutate(data);
+  };
 
   const [showModal, setShowModal] = useState(false);
 
