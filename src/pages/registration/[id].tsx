@@ -50,7 +50,7 @@ const Home: NextPage = () => {
   });
   const onSubmit = (data: Inputs) => {
     data.typeId = "cleq7h91600063ark8hp9gsp4";
-    data.registeredGameId = "cleq70f7g00003arkva9v94py";
+    data.registeredGameId = gameData?.id as string;
     create.mutate(data);
   };
 
@@ -122,9 +122,11 @@ const Home: NextPage = () => {
                 Pastikan semua data yang telah anda masukkan tidak ada yang salah. Anda tidak bisa mengubah data setelah pendaftaran tersimpan.
                 </div>
                 <div className="flex justify-center gap-3">
-                  <button type="submit" value="Submit" onSubmit={handleSubmit(onSubmit)} className="bg-[#FEB048] w-full py-3 rounded-lg font-poppins font-bold">
-                    Simpan
-                  </button>
+                  {/* <Link href={`/payment/${id}`} className="w-full"> */}
+                    <button  type="submit" value="Submit" onSubmit={handleSubmit(onSubmit)} className="bg-[#FEB048] w-full py-3 rounded-lg font-poppins font-bold">
+                      Simpan
+                    </button>
+                  {/* </Link> */}
                   <button type="button" onClick={() => setShowModal(false)} className="bg-[#E9DEA6] w-full py-3 rounded-lg font-poppins font-bold">
                     Batal
                   </button>
