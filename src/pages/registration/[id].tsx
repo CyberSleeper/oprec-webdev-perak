@@ -101,7 +101,7 @@ const Home: NextPage = () => {
         </label>
 
         <div className="relative mb-3">
-          <button type="button" onClick={() => setShowModal(true)} className="rounded bg-[#188C58] leading-tight py-1 px-3 w-[40%] flex justify-center shadow-md transition duration-150 ease-in-out hover:bg-[#167c4e] hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#126540] active:shadow-lg">
+          <button type="submit" value="Submit" onSubmit={handleSubmit(onSubmit)} onClick={() => setShowModal(true)} className="rounded bg-[#188C58] leading-tight py-1 px-3 w-[40%] flex justify-center shadow-md transition duration-150 ease-in-out hover:bg-[#167c4e] hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#126540] active:shadow-lg">
             <div className="flex items-center gap-2">
               <SlPaperPlane/>
               <p>Daftar Sekarang</p>
@@ -122,11 +122,11 @@ const Home: NextPage = () => {
                 Pastikan semua data yang telah anda masukkan tidak ada yang salah. Anda tidak bisa mengubah data setelah pendaftaran tersimpan.
                 </div>
                 <div className="flex justify-center gap-3">
-                  {/* <Link href={`/payment/${id}`} className="w-full"> */}
-                    <button  type="submit" value="Submit" onSubmit={handleSubmit(onSubmit)} className="bg-[#FEB048] w-full py-3 rounded-lg font-poppins font-bold">
+                  <Link href={`/payment/${id}`} className="w-full">
+                    <button className="bg-[#FEB048] w-full py-3 rounded-lg font-poppins font-bold">
                       Simpan
                     </button>
-                  {/* </Link> */}
+                  </Link>
                   <button type="button" onClick={() => setShowModal(false)} className="bg-[#E9DEA6] w-full py-3 rounded-lg font-poppins font-bold">
                     Batal
                   </button>
