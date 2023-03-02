@@ -5,3 +5,8 @@ interface IGame {
     paymentInfos: PaymentType[];
     key: number;
 }
+
+interface IType {
+    id: string;
+    name: string;
+}
